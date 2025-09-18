@@ -3,3 +3,22 @@
 @theme {
   --color-navbar: #121212;
 }
+
+@layer utilities {
+  .bg-slider-1 {
+    background-image: url('/bg-slide-1.png');
+    position: absolute;
+    z-index: -10;
+    top: 0;
+  }
+
+  .vector-img {
+    background-image: url('/vector.svg');
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-repeat: none;
+    background-size: cover;
+  }
+}
