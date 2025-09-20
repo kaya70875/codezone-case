@@ -8,6 +8,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import CtaMain from '@/components/cta/CtaMain';
+import TrendsSection from '@/components/trends/TrendsSection';
+import FavoritesSection from '@/components/FavoritesSection';
+import ExploreSection from '@/components/explore/ExploreSection';
 
 export default function Page() {
   const slides = [
@@ -24,7 +28,7 @@ export default function Page() {
   ];
 
   return (
-    <div>
+    <div className='w-full h-screen'>
       <Swiper modules={[Navigation]} navigation={{
         nextEl: '.custom-next',
         prevEl: '.custom-prev'
@@ -37,7 +41,7 @@ export default function Page() {
             >
               <ArrowRight className='absolute right-1/18 top-1/2 custom-next cursor-pointer' strokeWidth={1} color='white' size={48} />
               <ArrowLeft className='absolute left-1/18 top-1/2 custom-prev cursor-pointer' strokeWidth={1} color='white' size={48} />
-              <div className="vector-img" />
+              <div className="vector-img h-[250px]" />
               <MainWrapper>
                 <HeroInfo name={slide.name} desc={slide.desc} />
               </MainWrapper>
@@ -46,7 +50,16 @@ export default function Page() {
         ))}
       </Swiper>
 
-      <div className='container mx-auto'>HEEEEY</div>
+      <CtaMain />
+
+      <section className='sections flex flex-col gap-24'>
+        <TrendsSection />
+
+        {/*<FavoritesSection />*/}
+
+        <ExploreSection />
+      </section>
+
     </div>
 
   );
