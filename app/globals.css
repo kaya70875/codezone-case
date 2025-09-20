@@ -35,4 +35,14 @@
     opacity: 60%;
     z-index: 0;
   }
+
+  .clip-section {
+    clip-path: polygon(0 0, 100% 0, 90% 65%, 0% 100%);
+  }
+
+  .active {
+    background-color: #F0E74D;
+    color: var(--color-navbar);
+    font-weight: 700;
+  }
 }
