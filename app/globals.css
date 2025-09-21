@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navbar: #121212;
+  --color-main: #121212;
+  --color-accent: #F0E74D;
 }
 
 @layer utilities {
@@ -39,6 +40,19 @@
   .clip-section {
     clip-path: polygon(0 0, 100% 0, 90% 65%, 0% 100%);
   }
+
+  .clip-button {
+    filter: drop-shadow(10px 8px black);
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      clip-path: polygon(0% 5%, 100% 0, 95% 100%, 2% 90%);
+      content: '';
+    }
+  }
+
 
   .active {
     background-color: #F0E74D;
