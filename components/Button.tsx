@@ -9,8 +9,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ children, variant = 'default', className, ...props }: ButtonProps) {
 
     const variants = {
-        default: 'bg-white text-navbar uppercase font-[700]',
-        ghost: 'text-white bg-navbar border border-gray-200'
+        default: 'bg-white text-main uppercase font-[700]',
+        ghost: 'text-white bg-main border border-gray-200'
     }
 
     return (

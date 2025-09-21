@@ -9,7 +9,7 @@ export default function Navbar() {
     const LINKS = ['Haberler', 'Etkinlikler', 'Müzikler', 'Videolar', 'İletişim'];
 
     return (
-        <nav className='bg-navbar/60 backdrop-blur-xs text-white py-4 px-24 flex items-center w-full justify-between border-b border-[#2A2A2A] fixed top-0 z-50'>
+        <nav className='bg-main/60 backdrop-blur-xs text-white py-4 px-24 flex items-center w-full justify-between border-b border-[#2A2A2A] fixed top-0 z-50'>
             <div className='flex items-center gap-24'>
                 <Image src={logo} width={224} height={224} alt='logo' />
                 <div className="links flex items-center gap-8">

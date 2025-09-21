@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${saira.className} antialiased bg-navbar container-mx-auto`}
+        className={`${saira.className} antialiased bg-main container-mx-auto`}
       >
         <Navbar />
         <main className="">

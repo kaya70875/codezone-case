@@ -7,7 +7,7 @@ import woman from '@/public/woman.png';
 
 export default function CtaMain() {
     return (
-        <section className='relative w-full h-[75%] bg-navbar'>
+        <section className='relative w-full h-[75%] bg-main'>
             <div className=' flex flex-col items-center justify-center w-full mt-24 container mx-auto'>
                 <Image src={label1} width={548} height={548} alt='label1' />
                 <Image src={label2} width={248} height={248} alt='label2' />
