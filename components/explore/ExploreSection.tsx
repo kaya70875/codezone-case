@@ -4,6 +4,8 @@ import data from '@/data.json';
 import { CompassIcon } from 'lucide-react'
 import TrendCard from '../trends/TrendCard';
 import Button from '../Button';
+import Closing from '../Closing';
+import ExploreHeader from '../ExploreHeader';
 
 interface FiltersProps {
     activeFilter: string;
@@ -52,7 +54,7 @@ export default function ExploreSection() {
     return (
         <div className='container mx-auto flex items-start w-full justify-between'>
             <section className='flex flex-col gap-8'>
-                <SectionHeader icon={<CompassIcon size={48} color='#F0E74D' />} name='Keşfet' />
+                <ExploreHeader />
                 <div className='card flex flex-col gap-12'>
                     {cards.length > 0 ? (
                         cards.map((card, idx) => (
@@ -64,9 +66,11 @@ export default function ExploreSection() {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-24">
+            <section className="flex flex-col gap-24 max-w-xl">
                 <Filters activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+                <Closing />
             </section>
+
         </div>
     )
 }

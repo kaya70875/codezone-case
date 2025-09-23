@@ -6,7 +6,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import CtaMain from '@/components/cta/CtaMain';
 import TrendsSection from '@/components/trends/TrendsSection';
@@ -28,11 +28,17 @@ export default function Page() {
   ];
 
   return (
-    <div className='w-full h-screen'>
-      <Swiper modules={[Navigation]} navigation={{
+    <div className='w-full h-screen relative'>
+      <Swiper className='w-full' modules={[Navigation, Pagination]} navigation={{
         nextEl: '.custom-next',
         prevEl: '.custom-prev'
-      }} loop>
+      }}
+        loop
+        pagination={{
+          clickable: true, el: '.custom-pagination'
+        }}
+        slidesPerView={1}
+        spaceBetween={50}>
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div
@@ -50,12 +56,14 @@ export default function Page() {
         ))}
       </Swiper>
 
+      <div className="custom-pagination" />
+
       <CtaMain />
 
-      <section className='sections flex flex-col gap-24'>
+      <section className='sections flex flex-col gap-48'>
         <TrendsSection />
 
-        {/*<FavoritesSection />*/}
+        <FavoritesSection />
 
         <ExploreSection />
       </section>

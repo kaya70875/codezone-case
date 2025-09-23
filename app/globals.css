@@ -53,10 +53,42 @@
     }
   }
 
+  .custom-pagination {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    display: flex;
+    gap: 1rem;
+    z-index: 200;
+  }
+
+  .custom-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-main);
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    background-color: var(--color-accent);
+    opacity: 1;
+  }
+
+  .swiper-scrollbar {
+    background: transparent !important;
+  }
+
+  .swiper-scrollbar-drag {
+    background: var(--color-accent) !important;
+    border-radius: 9999px;
+  }
+
 
   .active {
-    background-color: #F0E74D;
-    color: var(--color-navbar);
+    background-color: var(--color-accent);
+    color: var(--color-main);
     font-weight: 700;
   }
+
 }
