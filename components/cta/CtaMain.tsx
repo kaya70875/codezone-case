@@ -18,7 +18,7 @@ export default function CtaMain() {
                 <Image src={woman} alt='woman' className='absolute -right-20 md:right-0 lg:right-1/12 top-52 md:top-24 z-10 w-[221px] md:w-[303px] h-[387px] md:h-[530px]' />
                 <div className='cta-bg' />
             </div>
-            <div className='vector-img h-[350px]' />
+            <div className='vector-img h-[250px] md:h-[350px]' />
         </section>
     )
 }
