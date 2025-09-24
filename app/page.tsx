@@ -44,7 +44,7 @@ export default function Page() {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div
-              className="h-screen w-full bg-cover bg-no-repeat bg-center overflow-hidden"
+              className="h-screen w-full bg-fit bg-top overflow-hidden"
               style={{ backgroundImage: `url(${slide.src})` }}
             >
               <ArrowRight className='absolute right-1/18 top-1/2 custom-next cursor-pointer hidden md:block' strokeWidth={1} color='white' size={48} />
