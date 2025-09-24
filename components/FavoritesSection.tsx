@@ -44,7 +44,7 @@ export default function FavoritesSection() {
         <section className='flex flex-col gap-12 relative'>
             <SocialsCard />
             <div className='container mx-auto flex flex-col md:flex-row gap-12 h-full items-center w-full justify-center'>
-                <header className='uppercase w-full flex items-center md:items-start justify-center md:justify-start'>
+                <header className='uppercase w-full flex items-center md:items-start justify-center md:justify-start mb-64 md:mb-0'>
                     <h2 className='text-white w-1/2 md:w-12 text-center md:text-start'>Ayın Favorileri</h2>
                 </header>
 

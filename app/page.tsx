@@ -62,10 +62,10 @@ export default function Page() {
 
       <CtaMain />
 
-      <section className='sections flex flex-col gap-24'>
+      <section className='sections flex flex-col gap-8'>
         <TrendsSection />
 
-        <div className='mb-48'>
+        <div className='mb-32'>
           <FavoritesSection />
         </div>
 
