@@ -1,7 +1,5 @@
 import React, { SetStateAction, useEffect, useState } from 'react'
-import SectionHeader from '../SectionHeader'
 import data from '@/data.json';
-import { CompassIcon } from 'lucide-react'
 import TrendCard from '../trends/TrendCard';
 import Button from '../Button';
 import Closing from '../Closing';
