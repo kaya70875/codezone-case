@@ -15,7 +15,7 @@ export default function TrendsSection() {
             <SectionHeader icon={<TrendingUpIcon color='#F0E74D' size={48} />} name='Trending' />
             <div className="cards">
                 {trends.map((trend, idx) => (
-                    <div className='flex gap-4' key={idx}>
+                    <div className='flex gap-4 p-4 md:p-0' key={idx}>
                         <span className='text-white text-4xl font-bold opacity-30'>0{idx + 1}</span>
                         <TrendCard author={{ name: trend.attributes.authors[0] }} desc={trend.attributes.desc} key={idx} />
                     </div>

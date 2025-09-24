@@ -8,14 +8,14 @@ import woman from '@/public/woman.png';
 export default function CtaMain() {
     return (
         <section className='relative w-full h-[75%] bg-main'>
-            <div className=' flex flex-col items-center justify-center w-full mt-24 container mx-auto'>
+            <div className=' flex flex-col items-center justify-center w-full mt-24'>
                 <Image src={label1} width={548} height={548} alt='label1' />
                 <Image src={label2} width={248} height={248} alt='label2' />
             </div>
 
-            <div className='container mx-auto'>
-                <Image src={man} width={420} height={437} alt='man' className='absolute left-1/12 top-24 z-10' />
-                <Image src={woman} width={303} height={530} alt='woman' className='absolute right-1/12 top-24 z-10' />
+            <div className=''>
+                <Image src={man} alt='man' className='absolute -left-20 md:left-0 lg:left-1/12 top-52 md:top-24 z-10 w-[281px] md:w-[420px] h-[293px] md:h-[437px]' />
+                <Image src={woman} alt='woman' className='absolute -right-20 md:right-0 lg:right-1/12 top-52 md:top-24 z-10 w-[221px] md:w-[303px] h-[387px] md:h-[530px]' />
                 <div className='cta-bg' />
             </div>
             <div className='vector-img h-[350px]' />

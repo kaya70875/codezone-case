@@ -10,6 +10,7 @@ import ExploreHeader from '../ExploreHeader';
 interface FiltersProps {
     activeFilter: string;
     setActiveFilter: React.Dispatch<SetStateAction<string>>;
+    className?: string;
 }
 
 interface Card {
@@ -52,22 +53,23 @@ export default function ExploreSection() {
     }, [activeFilter])
 
     return (
-        <div className='container mx-auto flex items-start w-full justify-between'>
+        <div className='container mx-auto flex flex-col gap-8 md:gap-0 xl:flex-row items-start w-full justify-between p-4'>
             <section className='flex flex-col gap-8'>
                 <ExploreHeader />
+                <Filters activeFilter={activeFilter} setActiveFilter={setActiveFilter} className='block xl:hidden' />
                 <div className='card flex flex-col gap-12'>
                     {cards.length > 0 ? (
                         cards.map((card, idx) => (
                             <TrendCard author={{ name: card.attributes.authors[0] }} img={card.attributes.img} desc={card.attributes.desc} date={card.createdAt} key={idx} />
                         ))
                     ) : (
-                        <h2 className='text-2xl font-medium text-white'>İstediğiniz kategoriye uygun haber bulunamadı.</h2>
+                        <span className='text-2xl font-medium text-white'>İstediğiniz kategoriye uygun haber bulunamadı.</span>
                     )}
                 </div>
             </section>
 
             <section className="flex flex-col gap-24 max-w-xl">
-                <Filters activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+                <Filters activeFilter={activeFilter} setActiveFilter={setActiveFilter} className='hidden xl:block' />
                 <Closing />
             </section>
 
@@ -75,14 +77,14 @@ export default function ExploreSection() {
     )
 }
 
-function Filters({ activeFilter, setActiveFilter }: FiltersProps) {
+function Filters({ activeFilter, setActiveFilter, className }: FiltersProps) {
 
     const filterButtons = ['Türk Rap', 'Yabancı Rap', 'Rap Haberleri', 'Haftanın Videoları', 'Ayın Videoları', 'Rap Sohbetleri', 'Rap Müsabakaları'];
 
     return (
-        <div className='flex flex-col gap-4'>
-            <h2 className='uppercase text-4xl text-white font-bold'>Ne Görmek İstersin ?</h2>
-            <div className="button flex gap-2 max-w-lg flex-wrap">
+        <div className={`flex flex-col gap-4 ${className}`}>
+            <h3 className='uppercase text-white'>Ne Görmek İstersin ?</h3>
+            <div className="button flex gap-2 max-w-full md:max-w-lg flex-wrap">
                 {filterButtons.map((button, idx) => (
                     <Button className={`${button == activeFilter ? 'active' : ''}`} key={idx} variant='ghost' onClick={() => setActiveFilter(button)}>{button}</Button>
                 ))}

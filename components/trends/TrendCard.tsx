@@ -20,10 +20,10 @@ export default function TrendCard({ author, desc, img, date }: TrendCardProps) {
         : "";
 
     return (
-        <div className='flex gap-4 items-start'>
+        <div className='flex flex-col md:flex-row gap-4 items-start w-full'>
             {img && (
-                <div className='flex flex-col gap-4'>
-                    <Image src={img} width={258} height={258} alt='image' />
+                <div className='flex flex-col gap-4 w-full'>
+                    <Image src={img} width={258} height={258} alt='image' className='w-full object-cover' />
                     <p className='text-gray-400 text-sm'>{formattedDate}</p>
                 </div>
             )}

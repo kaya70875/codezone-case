@@ -35,7 +35,7 @@ export default function Closing() {
 
     return (
         <section className='flex flex-col gap-20'>
-            <h2 className='uppercase text-4xl font-bold text-white'>Gelişmelerden İlk Sen Haberdar Ol!</h2>
+            <h3 className='uppercase text-white'>Gelişmelerden İlk Sen Haberdar Ol!</h3>
             <section className="email flex items-center px-4 w-full justify-between border-b border-b-[#3B3B3B] py-4 font-medium uppercase">
                 <p className='text-white'>Email</p>
                 <div className='flex items-center gap-2 text-[#F0E74D]'>
@@ -46,7 +46,7 @@ export default function Closing() {
 
             <section className="socials flex items-center gap-6 text-[#F0E74D] cursor-pointer">
                 {images.map((img, idx) => (
-                    <Image src={img.src} alt={img.name} />
+                    <Image src={img.src} alt={img.name} key={idx} />
                 ))}
             </section>
 
